@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* GoogleAuth.css */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #673ab7;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.auth-subtitle {
+  text-align: center;
+  color: #5f6368;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid #dadce0;
+  background-color: white;
+  color: #3c4043;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.google-signin-button:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.google-signin-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #e8eaed;
+  width: 100%;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #e0e0fd;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #202124;
+  margin: 0 0 4px 0;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #5f6368;
+  margin: 0 0 16px 0;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  background-color: #fee2e2;
+  color: #ef4444;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+  background-color: #fecaca;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px 16px;
+  }
+  
+  .auth-title {
+    font-size: 20px;
+  }
+  
+  .user-profile {
+    padding: 12px;
+  }
+}
